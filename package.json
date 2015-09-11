@@ -1,0 +1,21 @@
+{
+  "name": "perfilrest",
+  "version": "1.0.0",
+  "description": "Perfil ",
+  "main": "perfilrest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/welder496/perfil.git"
+  },
+  "keywords": [
+    "Perfil"
+  ],
+  "author": "Welder Mauricio de Souza <welder496@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "restler": "^3.3.0"
+  }
+}
