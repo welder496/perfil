@@ -5,10 +5,11 @@ var port = '12345';
 module.exports = {
 
    newPerfil: function(descricao, callback){
+      descricao = encodeURIComponent(descricao.descricao);
       if (descricao != ""){
           rest.post('http://'+host+":"+port+'/notas/perfil/new',
             {
-              data: descricao
+              data: {descricao: descricao}
             })
             .on('success', function(data,response){
                 callback(data);
@@ -33,6 +34,7 @@ module.exports = {
 
    deletePerfilByDescricao: function(descricao, callback){
       if (descricao!="") {
+          descricao = encodeURIComponent(descricao);
           rest.del('http://'+host+":"+port+'/notas/perfil/'+descricao)
           .on('success', function(data,response){
               callback(data);
@@ -47,6 +49,7 @@ module.exports = {
 
    updatePerfilById: function(id, descricao, callback){
       if (id != "") {
+          descricao = encodeURIComponent(descricao);
           rest.put('http://'+host+':'+port+'/notas/perfil/'+id+'/'+descricao)
           .on('success', function(data,response){
                 callback(data);
